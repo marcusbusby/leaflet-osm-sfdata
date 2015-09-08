@@ -1,7 +1,7 @@
 var map = L.map('map').setView([37.76094, -122.41538], 14);
 
 L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+	attribution: 'Map data <a href="https://data.sfgov.org/">SF OpenData</a>, Imagery <a href="http://openstreetmap.org">OpenStreetMap</a>',
 	maxZoom: 18
 }).addTo(map)
 /*L.tileLayer('https://api.tiles.mapbox.com/v4/marcusbusby.52574bfb/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFyY3VzYnVzYnkiLCJhIjoiY2EwMzBhNzRlMWUwMTU3MDBlYTVmMmRmYjlhNjUxYWEifQ._p23kyEGPcsZBSksKHPsEg', {
@@ -35,6 +35,18 @@ $("button").click(function() {
 	.fail(function() {
 	  alert("Ajax failed to fetch data")
 	})
+	$("button").css("background-color","#f1eee8");
+	$(this).css("background-color","#DBD5CA");
+	$("button").blur();
+	$("button").animate({
+		opacity: 0,
+	}, 1000);
+});
+
+$(".dropdown").hover(function() {
+	$("button").animate({
+		opacity: 100,
+	}, 1000);
 });
 
 function addPoints(data) {
@@ -51,6 +63,7 @@ function addPoints(data) {
 }
 
 map.addLayer(markers)
+
 /*function onMapClick(e) {
 	instantiate a polygon with no coordinates and initial point
 	after each subsequential click, add coordinates to polygon

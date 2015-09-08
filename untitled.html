@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
+	<div class="titlebar">
+	<h1>SAMPLE MAP</h1>
+	</div>
+	<div class="seperation"></div>
 	 <div id="map"></div>
-	 <button value="truck">trucks</button>
-	 <button value="push+cart">push cart</button>
-	 <button value="unknown">unknown</button>
+	 <div class="btn-group">
+	 	<div class="dropdown">
+	 		<p class="ddtitle">DATA OPTIONS </p>
+	 		<i class="fa fa-caret-down"></i>
+	 	</div>
+	 	<button value="truck">TRUCKS</button>
+	 	<button value="push+cart">PUSH CART</button>
+	 	<button value="unknown">UNKNOWN</button>
+	</div>
 </body>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
